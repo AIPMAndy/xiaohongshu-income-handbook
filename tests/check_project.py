@@ -40,3 +40,20 @@ for kind,v in r.refs:
     else: assert (ROOT/v).exists(), f'Missing file: {v}'
 assert 'deploy-pages@v4' in (ROOT/'.github/workflows/pages.yml').read_text()
 print(f'OK: {len(r.refs)} resource references, Pages workflow, local progress, MIT license')
+
+# V4 practical launch kit, verified 2026-11-02
+blueprints=(ROOT/'assets/blueprints.js').read_text(encoding='utf-8')
+bm=re.search(r'window\.XHS_BLUEPRINTS\s*=\s*(\{.*?\});?\s*$',blueprints,re.S)
+assert bm, 'missing 4-route launch kit'
+kit=json.loads(bm.group(1))
+assert len(kit['profiles'])==4
+assert sum(len(x['notes']) for x in kit['profiles'].values())==12
+assert len(kit['roadmap'])==30
+assert all(x.get('action') and x.get('checkpoint') and x.get('artifact') for x in kit['roadmap'])
+assert [x['day'] for x in kit['roadmap']]==list(range(1,31))
+assert all(book['plan'][i]['task']==kit['roadmap'][i]['title'] for i in range(30)), 'plan mismatched with operational data'
+assert 'id="launchChecklist"' in html and 'id="personaTabs"' in html and 'id="notesCards"' in html
+assert 'window.XHS_BLUEPRINTS' in (ROOT/'assets/blueprints-ui.js').read_text(encoding='utf8')
+assert (ROOT/'docs/从零起号到首单-逐步照做版.md').stat().st_size>20000
+assert (ROOT/'templates/30-day-operations.csv').exists()
+print('OK: 4 persona playbooks, 12 editable notes, 30 detailed days, long-form handbook')

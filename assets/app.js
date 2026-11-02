@@ -134,7 +134,14 @@
     days.forEach(day=>{
       const label=h('label','day-card'+(dayDone.has(day.day)?' done':''));const input=h('input');input.type='checkbox';input.checked=dayDone.has(day.day);input.setAttribute('aria-label','完成第'+day.day+'天任务');
       input.addEventListener('change',()=>{if(input.checked)dayDone.add(day.day);else dayDone.delete(day.day);save();renderPlan();countProgress();});
-      const detail=h('div');detail.append(h('strong','','DAY '+String(day.day).padStart(2,'0')+' · '+day.task),h('p','','验收：'+day.proof));label.append(input,detail);list.append(label);
+      const detail=h('div');detail.append(h('strong','','DAY '+String(day.day).padStart(2,'0')+' · '+day.task));
+      const extra=window.XHS_BLUEPRINTS?.roadmap?.[day.day-1];
+      if(extra){
+        const action=h('details','day-details');const summary=h('summary','','展开今天的具体步骤 ↗');
+        action.append(summary,h('div','day-operation',extra.action),h('div','day-acceptance','检查标准：'+extra.checkpoint),h('div','day-artifact','必须留下：'+extra.artifact));
+        detail.append(action);
+      }else{detail.append(h('p','','验收：'+day.proof));}
+      label.append(input,detail);list.append(label);
     });countProgress();
   }
   function makeTemplates(){const root=$('#toolGrid');root.replaceChildren();book.templates.forEach((item,i)=>{const card=h('article','tool-card glass');const top=h('div','tool-card-top');const button=h('button','','复制模板 ↗');button.type='button';button.addEventListener('click',()=>copy(item.title+'\n\n'+item.text));top.append(h('span','tool-num','TOOL '+String(i+1).padStart(2,'0')),button);card.append(top,h('h3','',item.title),h('p','',item.desc));root.append(card);});}
