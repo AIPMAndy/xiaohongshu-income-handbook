@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aipmandy.github.io/xiaohongshu-income-handbook/sitemap.xml
