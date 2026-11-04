@@ -6,7 +6,7 @@
 
 **在线教程**：https://aipmandy.github.io/xiaohongshu-income-handbook/  
 **GitHub 仓库**：https://github.com/AIPMAndy/xiaohongshu-income-handbook  
-**作者**：AI 酋长 Andy ｜ [个人官网](https://metaver.vip/) ｜ [咨询服务](https://metaver.vip/services)
+**作者**：AI酋长Andy ｜ [个人官网](https://metaver.vip/) ｜ [咨询服务](https://metaver.vip/services)
 
 ## 项目内容
 

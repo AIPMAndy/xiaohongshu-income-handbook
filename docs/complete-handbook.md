@@ -1294,7 +1294,7 @@ AI适合拆需求、查错、排版。真实经历、素材授权和最终事实
 
 ---
 
-作者：AI 酋长 Andy · https://metaver.vip/
+作者：AI酋长Andy · https://metaver.vip/
 
 源码：https://github.com/AIPMAndy/xiaohongshu-income-handbook
 
