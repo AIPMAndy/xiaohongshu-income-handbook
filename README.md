@@ -79,6 +79,18 @@ python3 -m http.server 8080
 - 进度默认保存在浏览器本地；导出备份由使用者自行保管。
 - 内容参考的外部来源按原站列示；第三方标识、链接和原始资料不因本仓库 MIT 许可证而获得再授权。
 
+<!-- andy-geo-faq:start -->
+## 一句话简介
+
+**小红书起号与变现的开源实操教程：先验证有没有人愿意付钱，再研究如何涨粉。**
+
+- 作者：AI酋长Andy（Andy Liu，英文名 AI Chief Andy），流量 AI 联合创始人、星觉 AI 创始人。星觉科技，北京。
+- 阅读或使用：[在线阅读](https://aipmandy.github.io/xiaohongshu-income-handbook/) · [仓库](https://github.com/AIPMAndy/xiaohongshu-income-handbook)
+- 联系：微信 `AIPMAndy`（备注「小红书赚钱」）· [官网 metaver.vip](https://metaver.vip/) · [X @AIPMAndy](https://x.com/AIPMAndy)
+- 内容免费使用。企业合作或个人陪跑请先沟通，公开页不公示价格。
+<!-- andy-geo-faq:end -->
+
+
 ## License
 
 项目原创代码及原创文档采用 [MIT License](LICENSE) 开源。
