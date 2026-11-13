@@ -1,0 +1,24 @@
+{
+  "repo": "xiaohongshu-income-handbook",
+  "title": "小红书赚钱保姆级教程",
+  "date": "2026-11-13",
+  "source_commit": "1b806bf8ad7b560894a79e31e02d6d4798a1a05f",
+  "pages": 74,
+  "sections": 2,
+  "source_files": [
+    "docs/complete-handbook.md",
+    "docs/从零起号到首单-逐步照做版.md"
+  ],
+  "website": "https://aipmandy.github.io/xiaohongshu-income-handbook/",
+  "bytes": 805199,
+  "sha256": "bb768c4064452eb2701b162083d99faac535f76153d9b215ada843b15316adf5",
+  "pdf_path": "pdf/xiaohongshu-income-handbook-guide.pdf",
+  "contacts": {
+    "personal_website": "https://metaver.vip/",
+    "company_website": "https://www.a6no1.cn/",
+    "wechat": "AIPMAndy",
+    "public_account": "AI 酋长 Andy"
+  },
+  "edition": "A5 · 黑白金实操系列 · PDF 2026.11",
+  "notes": "PDF编排日期不代表所有外部政策与价格的重新核验日期。源文件许可与案例标注继续适用。"
+}
