@@ -19,6 +19,14 @@
 **GitHub 仓库**：https://github.com/AIPMAndy/xiaohongshu-income-handbook  
 **作者**：AI酋长Andy ｜ [个人官网](https://metaver.vip/) ｜ [咨询服务](https://metaver.vip/services)
 
+## 新增：官方来源核验工作台（2026-11-21）
+
+[**打开可搜索的来源复核工作台**](https://aipmandy.github.io/xiaohongshu-income-handbook/source-audit.html)：直接引用 `assets/data.js` 中的 **18 条历史资料记录 / 16 个去重官方 URL**，可以搜索、按经营场景筛选、逐条记下**个人**复核进度并导出当前筛选 TXT（本机存储、不上传数据）。
+
+2026-11-21 对三条公开官方正文进行定向抽查：专业号合规指南（原更新日 2026-06-08）、电子资源定向准入（原生效日 2026-02-10）、闪拍功能管理规则（修订生效 2026-11-18，只限使用该功能的商家）。原教程历史资料截点 2026-11-02 未覆盖成今天；其余 URL、账号权限和后续动态政策需继续单独核验。独立研究记录：见 `source-audit.html`，其中附官方出处。
+
+自动测试：`python3 tests/check_project.py && node tests/source_audit.test.cjs`；主分支部署后执行 `python3 tests/verify_live.py` 对 HTML / JS / CSS / SEO / 74 页正式 PDF 等 8 项公开文件逐项 HTTP 200 + SHA-256 验收。
+
 ## 项目内容
 
 | 模块 | 内容 |
