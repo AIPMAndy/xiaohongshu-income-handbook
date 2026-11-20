@@ -2,6 +2,8 @@ name: Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -26,6 +28,7 @@ jobs:
           node tests/source_audit.test.cjs
 
   deploy:
+    if: github.event_name == 'push'
     needs: verify
     runs-on: ubuntu-latest
     environment:
